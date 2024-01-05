@@ -1,0 +1,300 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap');
+
+  *,
+  *::before,
+  *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+  body,
+  button {
+      font-family: "Poppins", sans-serif;
+  }
+
+  img {
+      width: 10%;
+  }
+
+  main {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      background: linear-gradient(280deg, rgb(5, 5, 54), rgb(3, 41, 3));
+  }
+
+  .card-container {
+      position: relative;
+      
+      height: 500px;
+      width: 370px;
+      color: aliceblue;
+
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  .card-face {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      padding: 2.5rem 3rem;
+      flex-direction: column;
+      transition: 0.8s;
+      backface-visibility: hidden;
+  }
+
+  .face-1 {
+      background: rgb(12, 12, 80);
+      transform-origin: right;
+      transform: translate(0%)   rotateY(0deg);
+
+  }
+
+  .face-2 {
+      background: rgb(12, 12, 80);
+      transform-origin: left;
+      transform: translateX(100%)  rotateY(100deg);
+  }
+  /* .face-1:hover{
+height: 0 550px 0 0;
+  } */
+  .container:hover .face-1 {
+      transform: translate(-100%) rotateY(-100deg);
+  }
+  .container:hover .face-2 {
+      transform: translate(0%) rotateY(0deg);
+  }
+
+  .logo img {
+      height: 20px;
+      width: 50px;
+  }
+
+  .logo-name {
+      margin-top: 14px;
+  }
+
+  .sheo-info {
+      display: flex;
+      align-items: center;
+  }
+
+  .sheo-new {
+    transform: translateZ(40px);
+    transform-style: preserve-3d;
+      margin-right: 0.8rem;
+      padding: 0.3rem 0.6rem;
+      color: black;
+      text-transform: uppercase;
+      background-color: aliceblue;
+      margin-top: 0.4rem;
+      border-radius: 3px;
+      letter-spacing: 1px;
+  }
+
+  .sheo-year {
+      margin-top: 0.4rem;
+      font-size: 1.05rem;
+      transform: translateZ(40px);
+      transform-style: preserve-3d;
+  }
+
+  .bottom-part {
+      display: flex;
+      position: absolute;
+      bottom: 7%;
+      width: 82%;
+      height: 4%;
+      
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .shoe-price {
+      font-size: 1.7rem;
+      position: relative;
+      transform: translateZ(40px);
+      transform-style: preserve-3d;
+  }
+
+  .shoe-price span {
+      margin-right: 4px;
+      font-size: 1rem;
+      align-items: center;
+      margin-bottom: 10px;
+
+
+  }
+
+  .right-arrow {
+      width: 35px;
+      color: aliceblue;
+      transform: translateZ(35px);
+      transform-style: preserve-3d;
+
+  }
+
+  .right-arrow i {
+      animation: move 0.5s infinite ease alternate;
+  }
+
+  @keyframes move {
+      0% {
+          transform: translateX(-5px);
+      }
+
+      100% {
+          transform: translateX(5px);
+      }
+
+  }
+
+  i {
+      font-size: 1.7rem;
+  }
+
+
+
+  .top-part {
+      width: 100%;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+
+  }
+
+  .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+
+  .features {
+      list-style: none;
+      margin-bottom: 30px;
+  }
+
+  .features li {
+      margin: 4px;
+  }
+
+  .color-wrap {
+      display: flex;
+
+      font-weight: 700;
+      font-size: 1.2rem;
+  }
+
+  .m-color {
+      margin-right: 0.7rem
+  }
+
+  .color {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 0.6rem;
+      transform: 0.2s;
+
+
+  }
+
+  .color.blue {
+      border: 3px solid rgb(255, 255, 255);
+      background-color: rgb(24, 24, 104);
+  }
+
+  .color.black {
+      border: 3px solid rgb(255, 255, 255);
+      background-color: black;
+  }
+
+  .color.white {
+      border: 3px solid rgb(200, 171, 171);
+      background-color: rgb(255, 255, 255);
+  }
+
+  .color.active {
+      border: 3pxm solid white;
+  }
+
+  .color:hover {
+      transform: scale(1.1);
+  }
+
+  .buy-wrap {
+      display: inline-flex;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: aliceblue;
+      border-radius: 5px;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+  }
+
+  .buy-wrap:hover {
+      background-color: antiquewhite;
+  }
+  
+  .show-image-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .shoe-img {
+    position: absolute;
+    width: 130%;
+    top: 50%;
+    left: 55%;
+    transition: all 0.4s ease-in-out;
+    transform: translate(-45%,-55%) translateZ(200px);
+    transform-style: preserve-3d;
+    filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.2));
+    animation: float 2s alternate ease-in-out infinite;
+  }
+  @keyframes float {
+    0%{
+        transform: translateX(calc(-45% -10px)) translateY(calc(-55% - 10px)) translateZ(200px);
+    }
+    100%{
+        transform: translateX(calc(-45% + 10px)) translateY(calc(-55% + 10px)) translateZ(400px);
+    }
+  }
+ img{
+   
+width: 90%;
+  }
+  .shoe{
+    rotate: -27deg;
+    transform: 0.6s;
+  }
+
+  .container:hover .shoe-img{
+    width: 115%;
+    top: 62%;
+    transition: all 0.4s ease-in-out;
+  }
+  @media (max-width:1000px) {
+    main{
+        width: 129%;
+    }
+    
+  }
